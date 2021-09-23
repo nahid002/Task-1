@@ -1,55 +1,69 @@
-import React from 'react';
-import './Header.css';
+import React from "react";
+import "./Header.css";
+import img from './images/burger.jpg';
 
+import { Container, Navbar, Nav,Carousel } from "react-bootstrap";
 
 const Header = () => {
-    return (
-        <div className="header" id="amir">
-            {/* //Header Section */}
-            <nav className="nav-items">
-                <a href="">Home</a>
-                <a href="">About</a>
-                <a href="">Service & Package</a>
-                <a href="">Gallery</a>
-                <a href="">FAQ</a>
-                <a href="">Contact</a>
-            </nav>
+  return (
+    <>
+    
+    <Navbar bg="#000" expand="lg">
+        <Container>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav " >
+            <Nav >
+              <Nav.Link className="text-white" href="">Home</Nav.Link>
+              <Nav.Link className="text-white" href="">About</Nav.Link>
+              <Nav.Link className="text-white" href="">Service & package</Nav.Link>
+              <Nav.Link className="text-white" href="">Gallery</Nav.Link>
+              <Nav.Link className="text-white" href="">FAQ</Nav.Link>
+              <Nav.Link className="text-white" href="">Contact</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+      <Carousel>
+          
+  <Carousel.Item>
+      
+    <img
+      className="d-block w-100"
+      src={img}
+      alt="First slide"
+    />
+    <Carousel.Caption>
+      <h3>First slide label</h3>
+      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+    </Carousel.Caption>
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={img}
+      alt="Second slide"
+    />
 
-            {/* carosol adding */}
+    <Carousel.Caption>
+      <h3>Second slide label</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </Carousel.Caption>
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={img}
+      alt="Third slide"
+    />
 
-            <div className="texts">
-                <div id="carouselExampleControls" className="carousel slide " data-bs-ride="carousel">
-                    <div className="carousel-inner">
-                        <div className="carousel-item active">
-
-                            <h1>A Picture is worth of Thousands Words</h1>
-                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime nisi facilis necessitatibus <br/> tempore et cumque corrupti quidem dolorem odit adipisci.</h3>
-                        </div>
-                        <div className="carousel-item">
-                        <h1>A Picture is worth of Thousands Words</h1>
-                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime nisi facilis necessitatibus <br/> tempore et cumque corrupti quidem dolorem odit adipisci.</h3>
-                        </div>
-                        <div className="carousel-item">
-                        <h1>A Picture is worth of Thousands Words</h1>
-                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime nisi facilis necessitatibus <br/> tempore et cumque corrupti quidem dolorem odit adipisci.</h3>
-                        </div>
-                    </div>
-                    
-                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span className="visually-hidden">Previous</span>
-                    </button>
-                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span className="visually-hidden">Next</span>
-                    </button>
-                    
-                </div>
-                <input type="button" value="View Gallery" />
-            </div>
-
-        </div>
-    );
+    <Carousel.Caption>
+      <h3>Third slide label</h3>
+      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    </Carousel.Caption>
+  </Carousel.Item>
+</Carousel>
+    </>
+  );
 };
 
 export default Header;
