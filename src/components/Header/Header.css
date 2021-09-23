@@ -1,0 +1,34 @@
+.header{
+    height: 900px;
+}
+.nav-items{
+    display: flex;
+    justify-content: right;
+    margin-bottom: 300px;
+}
+.nav-items a{
+    
+    text-decoration: none;
+    padding: 15px;
+    margin: 15px;
+}
+.btnstyle{
+    display: inline;
+}
+.carousel-item{
+    
+    margin-left: 150px;
+    margin-right: 250px;
+}
+.carousel-item h1,h3{
+    text-align: left;
+    color: white;
+}
+
+#amir{
+    background-image: url('./images/burger.jpg');
+    height: 900px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
